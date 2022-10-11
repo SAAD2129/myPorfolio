@@ -32,30 +32,25 @@ menuBtn.onclick = () => {
 
 	if (navigation.style.left == "0%") {
 		navigation.style.left = "-100%";
-		menuBtn.style.left = "2rem";
-		menuBtn.classList.add("uil-bars");
-		menuBtn.classList.remove("uil-times");
+		menuBtn.style.left = "1.5rem";
+		menuBtn.src = "icons/menu.svg"
+		if ("theme" == "dark") {
+			menuBtn.classList.add("inverted")
+		}
 	} else {
 		menuBtn.style.left = "90%";
 		navigation.style.left = "0%";
-		menuBtn.classList.remove("uil-bars");
-		menuBtn.classList.add("uil-times");
+		menuBtn.src = "icons/close.svg"
+		if ("theme" == "dark") {
+			menuBtn.classList.add("inverted")
+		}
 	}
 };
 window.onscroll = () => {
-	let wid = innerWidth;
-	if (wid > 400) {
-		navigation.style.left = "-100%";
-		menuBtn.style.left = "2rem";
-		menuBtn.src = "../icons/menu-4-fill.svg";
-		// navItems.forEach((navItem) => {
-		// 	navItem.style.display = "none";
-		// });
-	}
-
-	// document.querySelector(".Profile").style.display = "none";
-	// BarmenuBtn.src = "./icons/menu-4-fill.svg";
-	// navigation.style.bottom = "-100%";
+	navigation.style.left = "-100%";
+	menuBtn.style.left = "1.5rem";
+	menuBtn.classList.add("uil-bars");
+	menuBtn.classList.remove("uil-times");
 };
 
 // Dark Mode Settings
