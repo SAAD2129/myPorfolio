@@ -49,8 +49,7 @@ menuBtn.onclick = () => {
 window.onscroll = () => {
 	navigation.style.left = "-100%";
 	menuBtn.style.left = "1.5rem";
-	menuBtn.classList.add("uil-bars");
-	menuBtn.classList.remove("uil-times");
+	menuBtn.src = "icons/menu.svg"
 };
 
 // Dark Mode Settings
