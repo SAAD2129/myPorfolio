@@ -55,15 +55,12 @@ window.onscroll = () => {
 // Dark Mode Settings
 if (localStorage.getItem("theme") == "dark") {
 	document.body.classList.remove("DarkMode");
-	BarmenuBtn.classList.remove("inverted");
 	menuBtn.classList.remove("inverted");
 } else if (localStorage.getItem("theme") == "light") {
 	document.body.classList.add("DarkMode");
-	BarmenuBtn.classList.add("inverted");
 	menuBtn.classList.add("inverted");
 } else {
 	localStorage.setItem("theme", "light");
-	BarmenuBtn.classList.remove("inverted");
 	menuBtn.classList.remove("inverted");
 }
 // For Width more than 400
